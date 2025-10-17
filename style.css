@@ -1,0 +1,138 @@
+/* ===== style.css =====
+   Modern clean look for Vigenère File Encrypt/Decrypt Web
+   Author: Team 10
+*/
+
+:root {
+  --bg-color: #f5f7fb;
+  --card-bg: #ffffff;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --text-color: #1f2937;
+  --muted-text: #6b7280;
+  --border-color: #e5e7eb;
+  --radius: 12px;
+  --shadow: 0 4px 15px rgba(0,0,0,0.08);
+  --font: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg-color);
+  margin: 0;
+  padding: 40px 16px;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 720px;
+  background: var(--card-bg);
+  margin: auto;
+  padding: 32px 28px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+h1 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.muted {
+  text-align: center;
+  color: var(--muted-text);
+  margin-bottom: 24px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-top: 18px;
+  margin-bottom: 6px;
+}
+
+input[type="file"],
+input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="file"]:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  color: #fff;
+  background: var(--primary);
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+#status {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 32px 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 6px;
+  color: var(--muted-text);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 24px 20px;
+  }
+  button {
+    width: 100%;
+  }
+  .controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
