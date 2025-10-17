@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Team-10: Vigenère File Encrypt/Decrypt (Client-side)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Vigenère File Encrypt / Decrypt (Client-side)</h1>
+    <p class="muted">Demo: mã hóa/giải mã file bằng Vigenère (byte-wise) ngay trong trình duyệt. Không gửi file lên server.</p>
+
+    <label>Chọn file:
+      <input id="file" type="file">
+    </label>
+
+    <label>Khóa (Key):
+      <input id="key" type="text" placeholder="Nhập key...">
+    </label>
+
+    <div class="controls">
+      <button id="encryptBtn">Mã hóa (Encrypt)</button>
+      <button id="decryptBtn">Giải mã (Decrypt)</button>
+    </div>
+
+    <p id="status"></p>
+
+    <hr>
+    <h3>Ghi chú</h3>
+    <ul>
+      <li>Không gửi file ra server — mọi thao tác diễn ra trên máy bạn (trong trình duyệt).</li>
+      <li>Vigenère byte-wise: out[i] = (in[i] ± key[i % keylen]) mod 256.</li>
+      <li>Không dùng cho dữ liệu nhạy cảm. Để an toàn thực sự, dùng AES.</li>
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
