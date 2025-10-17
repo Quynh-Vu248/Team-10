@@ -9,7 +9,7 @@
 <body>
   <div class="container">
     <h1>Mã hóa/ Giải mã file bằng vigenere</h1>
-    <p class="muted">Demo: mã hóa/giải mã file bằng Vigenère (byte-wise) ngay trong trình duyệt. Không gửi file lên server.</p>
+    <p class="muted">Demo: mã hóa/giải mã file bằng Vigenere (byte-wise) ngay trong trình duyệt. Không gửi file lên server.</p>
 
     <label>Chọn file:
       <input id="file" type="file">
@@ -30,7 +30,7 @@
     <h3>Ghi chú</h3>
     <ul>
       <li>Không gửi file ra server — mọi thao tác diễn ra trên máy bạn (trong trình duyệt).</li>
-      <li>Vigenère byte-wise: out[i] = (in[i] ± key[i % keylen]) mod 256.</li>
+      //Vigenère byte-wise: out[i] = (in[i] ± key[i % keylen]) mod 256.
       <li>Không dùng cho dữ liệu nhạy cảm. Để an toàn thực sự, dùng AES.</li>
     </ul>
   </div>
