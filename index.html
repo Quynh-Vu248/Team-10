@@ -3,13 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Team-10: Mã hóa/ Giải mã file bằng vigenere</title>
+  <title>Team-10: Mã hóa/ Giải mã file bằng Vigenere</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <div class="container">
-    <h1>Mã hóa/ Giải mã file bằng vigenere</h1>
-    <p class="muted">Demo: mã hóa/giải mã file bằng Vigenere (byte-wise) ngay trong trình duyệt. Không gửi file lên server.</p>
+    <h1><i class="fa-solid fa-lock"></i> Mã hóa/ Giải mã file bằng Vigenere</h1>
+    <p class="muted">Demo: mã hóa/giải mã file bằng Vigenere (byte-wise) ngay trong trình duyệt.</p>
 
     <label>Chọn file:
       <input id="file" type="file">
@@ -20,14 +22,14 @@
     </label>
 
     <div class="controls">
-      <button id="encryptBtn">Mã hóa (Encrypt)</button>
-      <button id="decryptBtn">Giải mã (Decrypt)</button>
+      <button id="encryptBtn"><i class="fa-solid fa-lock"></i> Mã hóa (Encrypt)</button>
+      <button id="decryptBtn"><i class="fa-solid fa-unlock"></i> Giải mã (Decrypt)</button>
     </div>
 
     <p id="status"></p>
 
     <hr>
-    <h3>Ghi chú</h3>
+    <h3><i class="fa-solid fa-circle-info"></i> Ghi chú</h3>
     <ul>
       <li>Không gửi file ra server — mọi thao tác diễn ra trên máy bạn (trong trình duyệt).</li>
       <!-- Vigenère byte-wise: out[i] = (in[i] ± key[i % keylen]) mod 256. -->
