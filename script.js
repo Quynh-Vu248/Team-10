@@ -1,4 +1,3 @@
-// Vigenère byte-wise (mã hóa & giải mã)
 function vigenereBytes(data, key, mode = 'enc') {
   if (!key) return data;
   const keyBytes = new TextEncoder().encode(key);
@@ -10,7 +9,6 @@ function vigenereBytes(data, key, mode = 'enc') {
   );
 }
 
-// Tải file Uint8Array về máy
 function saveFile(data, name) {
   const a = document.createElement('a');
   a.href = URL.createObjectURL(new Blob([data]));
@@ -19,7 +17,6 @@ function saveFile(data, name) {
   URL.revokeObjectURL(a.href);
 }
 
-// Xử lý mã hóa / giải mã
 async function handleFile(mode) {
   const file = document.querySelector('#file').files[0];
   const key = document.querySelector('#key').value;
@@ -35,6 +32,5 @@ async function handleFile(mode) {
   status.textContent = `✅ Hoàn tất: ${name}`;
 }
 
-// Gắn sự kiện nút
 encryptBtn.onclick = () => handleFile('enc');
 decryptBtn.onclick = () => handleFile('dec');
